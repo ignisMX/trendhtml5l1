@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xena Events</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .logo{
+            width: 50px;
+        }
+        .header-container{
+            display: flex;
+            background-color: rgba(58, 100, 240, 0.5);
+        }
+        h2{
+            color: seashell;
+        }
+        .form-container{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-container">
+        <img src="events.png" class="logo"/>
+        <h2>Xena Events</h2>
+    </header>
+    <section>
+        <form class="form-container">
+            <label for="person">Name</label>
+            <input id="person" type="text" name="person" onkeypress="return /[a-z]/i.test(event.key)" required/>
+            <label for="age">Age</label>
+            <input id="age" type="number" min="18" step="1" name="age" onkeypress="return /\d/i.test(event.key)" required/>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="name@example.com" required/>
+            <label for="city">City</label>
+            <input id="city" type="text" name="city" list="cities" required/>
+            <datalist id="cities">
+                <option value="Rajkot">
+                <option value="Vizag">
+                <option value="Bangalore">
+            </datalist>
+            <input type="submit" value="send"/>
+        </form>
+    </section>
+</body>
+</html>

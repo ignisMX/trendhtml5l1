@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCC</title>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 400px; width: 50%;"></div>
+    <script>
+        window.onload = function () {
+            const chart = new CanvasJS.Chart("chartContainer",
+                {
+
+                    title: {
+                        text: "Board of Control for Cricket in India"
+                    },
+                    axisX:{
+                        title: "Over"
+                    },
+                    axisY:{
+                        title: "Runs"
+                    },
+                    data: [
+                        {
+                            type: "line",
+
+                            dataPoints: [
+                                { x: 5, y: 40 },
+                                { x: 10, y: 75 },
+                                { x: 15, y: 140 }
+                            ]
+                        }
+                    ]
+                });
+
+            chart.render();
+        }
+    </script>
+</body>
+
+</html>
